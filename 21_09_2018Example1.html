@@ -1,0 +1,35 @@
+<html>
+<script src="lib/angular.js"></script>
+<script src="lib/app.js"></script>
+
+<body ng-app="app13">
+    <div ng-controller="Controller13">
+        <!-- {{jsonp}} -->
+        <select ng-model="selectedOption">
+            <option ng-repeat="data in listData" value="{{data.id - 4}}">{{data.id - 3}}</option>
+        </select>
+        <!-- {{names[selectedOption]}} -->
+        <br> First Name :{{listData[selectedOption].first_name}}
+        <br> Last Name :{{listData[selectedOption].last_name}}<br>
+        <img src = "{{listData[selectedOption].avatar}}">
+        <br>
+        <!-- {{listData}} -->
+        <select ng-model="selectedOption1">
+            <option ng-repeat="data in listData1" value="{{data.id}}">{{data.id}}</option>
+        </select>
+        <br> Album Id : {{listData1[selectedOption1].albumId}}<br> Id : {{listData1[selectedOption1].id}}<br> Title : {{listData1[selectedOption1].title}}<br>        Url : <a href="{{listData1[selectedOption1].url}}">
+            {{listData1[selectedOption1].url}}<p>
+                <img src = {{listData1[selectedOption1].url}}>
+            </p>
+        </a>
+        <br> Thumbnail Url : <a href="{{listData1[selectedOption1].url}}">
+            {{listData1[selectedOption1].url}}<p>
+                <img src = {{listData1[selectedOption1].thumbnailUrl}}>
+            </p>
+        </a>
+        <br>
+    </div>
+
+</body>
+
+</html>

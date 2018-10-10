@@ -1,0 +1,59 @@
+<html>
+<script src="lib/angular.js"></script>
+<script src="lib/app.js"></script>
+
+<body ng-app="app12" ng-controller="Controller12">
+    <div>
+        Email: &nbsp;<input ng-model="email">
+    </div>
+    <div>
+        Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input ng-model="password">
+    </div>
+
+    <div>
+        <input type="button" value="Send" ng-click="postdata(email, password);"> 
+    </div>
+
+    <p>Output Message : {{message}}</p>
+
+    <p>Token : {{token}}</p>
+
+    <p>StatusCode: {{statusval}}</p>
+
+    <p>Status: {{statustext}}</p>
+
+    <p>Response Headers: {{headers}}</p>
+    <p>
+        {{name1}}
+    </p>
+    <br>
+    <br>
+    <br>
+    <div>
+        Name: &nbsp;<input ng-model="name1">
+    </div>
+    <div>
+        Job: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input ng-model="job">
+    </div>
+
+    <div>
+        <input type="button" value="Send" ng-click="postdata1(name1, job);"> 
+    </div>
+
+    <p>Output Message : {{message}}</p>
+
+    <p>Token : {{token}}</p>
+
+    <p>StatusCode: {{statusval}}</p>
+
+    <p>Status: {{statustext}}</p>
+
+    <p>Response Headers: {{headers}}</p>
+    <p>Name : {{name1}}</p>
+
+
+
+    
+</body>
+
+</html>

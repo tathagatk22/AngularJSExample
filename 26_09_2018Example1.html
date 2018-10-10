@@ -1,0 +1,46 @@
+<html>
+<script src="lib/angular.js"></script>
+<!-- <script src="lib/app.js"></script> -->
+
+<body ng-app="app15">
+    <div ng-controller="Controller15">
+        <!-- {{message}} -->
+        <!-- {{users}}<br> -->
+        <!-- {{usersdata}}<br> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul>
+            <li ng-repeat = "x in usersdatadata">
+                {{x.id}}
+            </li>
+        </ul>
+        {{usersdatadata}}<br>
+        <br>
+        <!-- {{message}} -->
+        <br>
+        <!-- {{dara}} -->
+    </div>
+
+</body>
+
+
+
+<script type="text/javascript">
+    var app15 = angular.module("app15", []);
+    app15.controller("Controller15", function ($scope, $http) {
+        $scope.dara = "sdasddasda"
+        $http.get('https://reqres.in/api/users?page=2').then(function (response) {
+            $scope.users = response
+            $scope.usersdata = response.data
+            $scope.usersdatadata = response.data.data
+            $scope.message = "Sucessfull"
+        }, function (response) {
+            $scope.message = "Unsucessfull"
+        });
+    });
+</script>
+
+</html>

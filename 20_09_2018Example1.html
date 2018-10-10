@@ -1,0 +1,21 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="lib/app.js"></script>
+
+<body ng-app='app8'>
+    <div ng-controller = 'Controller8'>
+        <table  border="1" width="100%">
+        <th ng-click="orderby('name')"> Name
+        </th>
+        <th ng-click="orderby('country')"> Country
+        </th>
+        <tr ng-repeat="x in names | orderBy : myOrder">
+            <td>{{x.name}}</td>
+            <td>{{x.country}}</td>
+        </tr>
+        </table>
+    </div>
+</body>
+
+</html>

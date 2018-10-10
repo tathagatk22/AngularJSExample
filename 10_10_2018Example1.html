@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body >
+
+    <h1 id="id1">My Heading 1</h1>
+    <script>
+        var count = 0;
+        function myfunc() {
+            var redVal = Math.floor((Math.random() * 255) + 1);
+            var greenVal = Math.floor((Math.random() * 255) + 1);
+            var blueVal = Math.floor((Math.random() * 255) + 1);
+            var fadeVal = Math.random();
+            var colorString = "rgba(" + redVal + ',' + greenVal + ',' + blueVal + ',' + fadeVal + ')';
+            var x = Math.round(0xffffff * Math.random()).toString(16);
+            var y = (6 - x.length);
+            var z ="000000";
+            var z1 = z.substring(0, y);
+            var color = "#" + z1 + x;
+            document.getElementById('id1').style.color = colorString;
+        }
+        // document.body.onkeyup = function (e) {
+        //     if (e.keyCode == 32) {
+        //         setBackground();
+        //     }
+        // }
+        
+        function myFunction() {
+            return "#" + Math.random().toString(16).slice(2, 8)
+            //var n = a + "<br>" + b + "<br>" + c + "<br>" + d;
+        }
+        function setBackground() {
+            var bgColor = myFunction();
+            document.getElementById("id1").style.background = bgColor;
+        }
+        setInterval(setBackground, 5000)
+    </script>
+    <!-- <button type="button" onclick="document.getElementById('id1').style.color = 'rgb(244,12,124)'">
+        Click Me!</button>
+
+    <button type="button" onclick="myfunc();">
+        Click Me!</button>
+        <div id = "id2" style="transition: all .5s ease"> dssdasdas
+            </div>   -->
+</body>
+
+</html>

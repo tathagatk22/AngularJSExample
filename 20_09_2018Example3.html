@@ -1,0 +1,33 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="lib/app.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+    var app10 = angular.module("app10", [])
+    app10.controller("Controller10", function ($scope) {
+        var image = {
+            flag: "image/image1.jpg"
+        };
+        $scope.image = image;
+        $scope.Value = "image/image1.jpg";
+    });
+
+</script>
+
+<body ng-app="app10">
+    <div ng-controller="Controller10">
+        <div>
+            Birds
+        </div>
+        <div>
+            <img ng-src={{Value}} height="100" width="100" />
+            <img ng-src="{{image.flag}}"  style="height:auto ;width:auto" />
+        </div>
+    </div>
+
+</body>
+
+</html>

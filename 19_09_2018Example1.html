@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "en-US" ng-app = "app">
+<script src ="lib/angular.js"></script>
+<script type="text/javascript">
+    var app = angular.module('app',[])
+    app.controller("DemoController", function($scope){
+    $scope.Value = "Angular JS";
+    })
+</script>
+
+<body>
+
+  <div ng-controller="DemoController">
+
+        Tutorial Name : <input type="text" ng-model="Value"/><br>
+    
+        This tutorial is {{Value}}
+    </div>
+    
+</body>
+
+</html>

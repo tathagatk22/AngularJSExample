@@ -1,0 +1,35 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="lib/app.js"></script>
+
+<body ng-app="app7">
+    <div  ng-controller = "Controller7">
+        <form>
+            Name : <input type="text" ng-model = "name">
+             {{name | lowercase}}    
+             {{name | uppercase}}
+            Topics :
+            <br>
+            {{fullName("Tathagat" , "Khanorkar")}}
+             <select ng-model = "selectedTopic">
+                <option>{{Topics.option1}}</option>
+                <option>{{Topics.option2}}</option>    
+            </select> 
+                <h1>{{selectedTopic}}</h1>
+            <select ng-model = "selectedName" ng-options="x for x in Topics">
+            </select>
+            <select ng-model = "selectedName1 " ng-options="x for x in names">
+            </select>
+           
+            <ul>
+               <li ng-repeat="name in names">{{name}}</li>
+           </ul>
+        </form>
+                
+                   
+    </div>
+
+</body>
+
+</html>

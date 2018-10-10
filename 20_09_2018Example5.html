@@ -1,0 +1,52 @@
+<html>
+<script src="lib/angular.js"></script>
+<script src = "lib/app.js"></script>
+<style>
+    table,
+    th,
+    td {
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #89BDBB;
+        color: #3EA66B
+    }
+
+    table tr:nth-child(even) {
+        background-color: #B1D9D8;
+        color: #63A77C
+    }
+    /*  <table>
+        <tr ng-repeat="x in names">
+            <td ng-if="$odd" style="background-color:#00DE93">
+                {{ x.Name }}</td>
+            <td ng-if="$even" style="background-color:#00DECE">
+                {{ x.Name }}</td>
+            <td ng-if="$odd" style="background-color:#00DE93">
+                {{ x.Country }}</td>
+            <td ng-if="$even" style="background-color:#00DECE">
+                {{ x.Country }}</td>
+        </tr>
+    </table> */
+</style>
+
+
+<body>
+    <div ng-app="myApp11" ng-controller="Controller11">
+        <table>
+            <tr ng-repeat="x in names.data">
+                <td>{{ x.id }}</td>
+                <td>{{ x.first_name | uppercase }}</td>
+                <td>{{ x.last_name}}</td>
+                <td>{{ x.avatar }}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        
+    </script>
+</body>
+
+</html>

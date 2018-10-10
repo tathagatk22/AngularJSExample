@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en-US" ng-app = "app">
+<script src ="lib/angular.js"></script>
+<script type ="text/javascript">
+  var app=angular.module("app", [])
+  app.controller("controller1", function ($scope) {
+    $scope.val = "Tathagat";
+  })
+</script>
+<body>
+
+  <!-- <div ng-controller="controller1"> -->
+    <div>
+    <p>Name : <input type = "text" ng-model = "val"></p>
+    <h1>Hello {{val}}</h1>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('serviceApp', []);
+
+        app.controller('serviceCtrl', function ($scope, $http) {
+
+            $http({
+
+                method: 'GET',
+
+                url: 'https://reqres.in/api/users?page=2'
+
+            }).then(function success(response) {
+                $scope.myWelcome = response.data.data;
+            }, function error(response) {
+                $scope.myWelcome = "Not************Found"
+            }
+                );
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div ng-app="serviceApp" ng-controller="serviceCtrl">
+
+        <p>Hi, Guest</p>
+
+        <ul>
+            <li ng-repeat="data in myWelcome">
+                {{data.id + '   '+data.first_name + ' '+ data.last_name}}
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

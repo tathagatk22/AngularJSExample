@@ -1,0 +1,15 @@
+<html>
+    <script src="lib/angular.js"></script>
+    <script src = "lib/app.js"></script>
+    <body>
+        <div ng-app = "app3">
+            <div ng-controller = "Controller1">
+                <ul>
+                    <li ng-repeat = "tnames in topics.TopicNames">
+                        {{tnames.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
